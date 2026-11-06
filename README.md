@@ -4,7 +4,7 @@
 
 ---
 
-## 🌟 Key Features
+## Key Features
 
 1. **Tree-Structured To-Dos & Packing Lists**:
    - Organize items by container (e.g., *Main Luggage / Bag*, *Cabin Backpack*, *Coat Pockets*, *Home Departure Checks*).
@@ -41,7 +41,7 @@
 
 ---
 
-## 🚀 Running the App
+## Running the App
 
 The dev server is running at:
 - **Local**: [http://localhost:5173](http://localhost:5173)
