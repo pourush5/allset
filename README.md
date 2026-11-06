@@ -4,17 +4,17 @@
 
 ---
 
-## Key Features
+## 🌟 Key Features
 
 1. **Tree-Structured To-Dos & Packing Lists**:
    - Organize items by container (e.g., *Main Luggage / Bag*, *Cabin Backpack*, *Coat Pockets*, *Home Departure Checks*).
    - Add children nodes to any container: inside **Bag**, add **Wallet**, **Toothbrush**, **Laptop**, or even sub-categories like *Tech Pouch* or *Clothing*.
    - Supports arbitrary nesting depth (Parents, Children, Sub-children).
 
-2. **Interactive Visual Tree Diagram (Canvas View)**:
-   - Dynamic SVG & Tidy Tree layout engine with smooth Bezier curve branch connectors.
+2. **Interactive Visual Tree Diagram**:
+   - Dynamic SVG Tidy Tree layout engine with smooth Bezier curve branch connectors.
    - Dual orientation support: switch seamlessly between **Horizontal Tree (Left-to-Right)** and **Vertical Tree (Top-Down)**.
-   - Mobile touch gestures: smooth drag-to-pan, pinch-to-zoom, and zoom controls.
+   - Fluid touch gestures: drag-to-pan, pinch-to-zoom, and zoom controls.
    - Visual branch indicators: connectors glow green when sub-branches are completed.
 
 3. **Pre-Journey Ticking Experience**:
@@ -26,29 +26,50 @@
 4. **Outline Checklist View**:
    - Complementary hierarchical checklist outline view with tree branch lines (`├──`, `└──`) and accordion collapsing for rapid one-handed packing.
 
-5. **Audio & Celebration Feedback**:
-   - Built-in Web Audio API synthesizer for crisp check/uncheck pops.
+5. **Audio, Haptic & Celebration Feedback**:
+   - Native haptic feedback (`expo-haptics`) on physical mobile devices.
    - Ascending chord chime when a container/bag is completely packed.
    - Victory fanfare and confetti burst when the whole trip reaches 100% completion!
 
-6. **Presets & Customization**:
+6. **Presets & Offline Storage**:
    - Includes ready-to-use travel templates:
      - **Trip to Tokyo (Flight & Hotel)** — includes Bag with Laptop, Toothbrush, Wallet, Clothes, plus Cabin Tech, Travel Documents, and Home Departure Checks.
      - **Weekend Getaway (Road Trip)**
      - **Start Blank (Clean Canvas)**
-   - Add custom bags, containers, items, or delete with confirmation.
-   - Automatic local storage persistence.
+   - Persistent storage (`@react-native-async-storage/async-storage` & `localStorage`).
 
 ---
 
-## Running the App
+## 📱 Running on Mobile
 
-The dev server is running at:
-- **Local**: [http://localhost:5173](http://localhost:5173)
-- **Mobile on LAN**: Open `http://<your-local-ip>:5173` on your smartphone browser.
+### Option 1: React Native (Expo Go)
+Run the native React Native app directly on your iPhone or Android device:
 
-### Scripts
-- `npm run dev`: Start Vite development server
-- `npm run build`: Type-check with TypeScript and build production bundle
+```bash
+npm run expo
+```
+1. Install **Expo Go** on your phone from the [App Store (iOS)](https://apps.apple.com/app/expo-go/id982107779) or [Google Play Store (Android)](https://play.google.com/store/apps/details?id=host.exp.exponent).
+2. Scan the QR code displayed in your terminal with your phone camera (iOS) or the Expo Go app (Android).
+3. The app will launch natively on your phone with live reload and physical haptics!
+
+### Option 2: Mobile Web PWA
+Run the mobile web / PWA version:
+```bash
+npm run dev
+```
+To find the IP and QR code for your phone browser:
+```bash
+npm run mobile
+```
+
+---
+
+## 🛠️ Scripts Reference
+
+- `npm run expo`: Start React Native development server with Expo Go QR code
+- `npm run expo:android`: Open in Android emulator / connected device
+- `npm run expo:ios`: Open in iOS simulator
+- `npm run dev`: Start Vite web app dev server
+- `npm run mobile`: Print mobile LAN URL and scan QR code for web PWA
+- `npm run build`: Type-check and build web bundle
 - `npm run lint`: Lint code with Oxlint
-- `npm run preview`: Preview production build

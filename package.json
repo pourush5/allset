@@ -6,6 +6,9 @@
   "scripts": {
     "dev": "vite",
     "mobile": "node scripts/mobile-url.cjs",
+    "expo": "cd mobile && npx expo start",
+    "expo:android": "cd mobile && npx expo start --android",
+    "expo:ios": "cd mobile && npx expo start --ios",
     "build": "tsc -b && vite build",
     "lint": "oxlint",
     "preview": "vite preview"
