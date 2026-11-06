@@ -74,3 +74,4 @@ export function getCategoryColors(category?: NodeCategory): { bg: string; text: 
       return { bg: '#f9fafb', text: '#4b5563', border: '#e5e7eb' };
   }
 }
+
